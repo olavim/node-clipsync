@@ -2,22 +2,24 @@
 
 Program to synchronize clipboards between multiple machines (Windows, OS X, Linux).
 
-#### Install
+### Install
 
 Run `npm install` from the project folder.
 
-#### How to use
+### How to use
 
 The program consists of a central server machine and a number of clients. First you have to start the server, then connect to it from the machines you wish to sync with the server.
 
 `node clipsync.js [args]`
 
-#### Arguments
+### Arguments
 
-|`--port <port>` or `-p <port>`|Specifies the port to listen on/connect to (default port is 9009)|
-|`--host <host>` or `-h <host>`|Specifies the address of the server to connect to.|
+|Argument|Explanation|
+|---|---|
+|`--port` or `-p`|Specifies the port to listen on/connect to (default port is 9009)|
+|`--host` or `-h`|Specifies the address of the server to connect to.|
 
-#### Examples
+### Examples
 
 Start a clipsync server on port 9009
 
