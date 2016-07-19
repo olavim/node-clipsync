@@ -2,10 +2,13 @@
   "name": "clipsync",
   "version": "1.0.0",
   "description": "Synchronize clipboard between machines",
-  "main": "index.js",
+  "main": "clipsync.js",
+  "bin": {
+    "clipsync": "./clipsync.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node clipsync.js"
   },
   "author": "Olavi Mustanoja",
   "license": "ISC",

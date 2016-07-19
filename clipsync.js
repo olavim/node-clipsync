@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var ncp = require('copy-paste');
 var net = require('net');
 
