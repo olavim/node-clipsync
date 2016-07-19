@@ -23,16 +23,16 @@ The program consists of a central server machine and a number of clients. First 
 
 Start a clipsync server on port 9009
 
-`node clipsync.js`
+    node clipsync.js
 
 Start a clipsync server on port 3003
 
-`node clipsync.js --port 3003`
+    node clipsync.js --port 3003
 
 Connect to a clipsync server located at the ip-address 192.168.1.40, listening on port 9009
 
-`node clipsync.js --host 192.168.1.40`
+    node clipsync.js --host 192.168.1.40
 
 Same as above, but listening on port 2000
 
-`node clipsync.js --host 192.168.1.40 --port 2000`
+    node clipsync.js --host 192.168.1.40 --port 2000
