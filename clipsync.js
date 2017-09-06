@@ -22,13 +22,13 @@ function setupClient() {
 	var socket = net.createConnection(serverPort, host, function() {
 		console.log('Connected to server.');
 	});
-	handleCLientConnect(socket);
+	handleClientConnect(socket);
 }
 
 function setupServer() {
 	const server = net.createServer(function(socket) {
 		console.log('Client connected from ' + socket.remoteAddress);
-		handleCLientConnect(socket);
+		handleClientConnect(socket);
 	});
 
 	server.listen(serverPort, function() {
@@ -36,7 +36,7 @@ function setupServer() {
 	});
 }
 
-function handleCLientConnect(socket) {
+function handleClientConnect(socket) {
 	clients.push(socket);
 	listenClientData(socket);
 	listenClientEnd(socket);
@@ -78,6 +78,8 @@ function createInterval() {
 		ncp.paste(function(err, currentClipboard) {
 			if (currentClipboard && currentClipboard !== serverClipboard) {
 				serverClipboard = currentClipboard;
+				ncp.copy(currentClipboard.toString());
+				console.log('Received clipboard data: ' + currentClipboard.toString());
 				clients.forEach(function (c) {
 					c.write(currentClipboard);
 				});
